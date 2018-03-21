@@ -24,7 +24,7 @@ Project Requirements - Non-functional requirements
 
 Project Plan - Overview
 
-* Project objectives
+* Project objectives:
   * Our company secured a contract for a local council in Victoria to
     re-surface roads in a designated square kilometre area.
   * Can use
@@ -34,5 +34,9 @@ Project Plan - Overview
     a quote.
   * Need to write related code along with an elegant GUI to support the
     calculations.
-* Requirements
-* Constraints
+* Requirements:
+  * Use any method to calculate the total area of the roads.
+  * Has to be testable.
+  * Easy to use GUI.
+* Constraints:
+  * Only have access to publicly available data.
