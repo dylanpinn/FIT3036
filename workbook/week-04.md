@@ -1,6 +1,7 @@
 # Week 4
 
-Created ![Trello Board](https://trello.com/b/fgAiXzRE) with the following lists
+Created [Trello Board](https://trello.com/b/fgAiXzRE) with the following lists
+
 * todo
 * doing
 * done
@@ -8,10 +9,12 @@ Created ![Trello Board](https://trello.com/b/fgAiXzRE) with the following lists
 Created tickets for each of the sections of the Project Specification
 
 Project Requirements - Functional Requirements
+
 * System shall allow a user to select a 1 square km area on Google Maps
 * System shall calculate the total area of the roads in the nominated square area
 
 Project Requirements - Non-functional requirements
+
 * System shall be available via the Internet
 * System shall be testable
 * System shall be cheap to host
@@ -19,6 +22,7 @@ Project Requirements - Non-functional requirements
 * System shall be easy to maintain
 
 Project Plan - Overview
+
 * Project objectives
   * Our company secured a contract for a local council in Victoria to re-surface roads in a designated square kilometre area.
   * Can use

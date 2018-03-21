@@ -21,6 +21,7 @@ Started preparing LaTex project proposal document with outlined sections.
 2. Non-functional Requirements
 
 ## Project Plan
+
 1. Overview - Project objectives, requirements and constraints.
 2. Risk Analysis - What are the main project risks, their probabilities and risk reduction strategies?
 3. Resource Requirements - Hardware and software (more specific than Functional Requirements)
@@ -33,4 +34,3 @@ Started preparing LaTex project proposal document with outlined sections.
 * Constraints
   * Available information online
   * No / Limited access to council records
-

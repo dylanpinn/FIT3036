@@ -9,4 +9,4 @@ This is the repository for the Monash 3rd year computer science project.
 
 ## Resources
 
-- ![Trello Board](https://trello.com/b/fgAiXzRE)
+- [Trello Board](https://trello.com/b/fgAiXzRE)
