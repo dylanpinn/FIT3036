@@ -21,7 +21,8 @@ Use OpenStreetMaps to generate OSM JSON file of all of the streets within this a
     * Exclude - unpaved
     * Look at excluding these using query
 * Can use Overpass bounding box to define lat/long of area to query
-* Can use Haversine Distance calculation to calculate distance between all of the nodes of a way.
+* Can use Haversine Distance calculation to calculate distance between all of
+  the nodes of a way.
 * Sum the distance by lane width
   * Need default if not provided
   * [Default lane length](https://en.wikipedia.org/wiki/Lane)

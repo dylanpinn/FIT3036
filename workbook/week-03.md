@@ -24,11 +24,11 @@ Started preparing LaTex project proposal document with outlined sections.
 
 1. Overview - Project objectives, requirements and constraints.
 1. Risk Analysis - What are the main project risks, their probabilities and
-   risk reduction strategies?
+    risk reduction strategies?
 1. Resource Requirements - Hardware and software (more specific than Functional
-   Requirements)
+    Requirements)
 1. Schedule - Corresponding to tasks identified above (e.g. in a Gantt chart,
-   PERT chart, Kanban, etc...)
+    PERT chart, Kanban, etc...)
 
 ## Overview
 
