@@ -5,14 +5,14 @@
 * GUI
   * Web app
   * Google Maps embed to move square 1km box around map
-	* Button to generate result
-	* This posts latitude and longitude of the area to the backend API
+  * Button to generate result
+  * This posts latitude and longitude of the area to the backend API
 * API
-	* Has an endpoint to receive data and return a result
-	* Need to connect to Open Street Maps to generate data for area
-	* Need parse result calculating length of roads and multiplying by lane width
-	* Need to keep track of total and then return total area
- 
+  * Has an endpoint to receive data and return a result
+  * Need to connect to Open Street Maps to generate data for area
+  * Need parse result calculating length of roads and multiplying by lane width
+  * Need to keep track of total and then return total area
+
 Started preparing LaTex project proposal document with outlined sections.
 
 ## Project Requirements
@@ -32,5 +32,5 @@ Started preparing LaTex project proposal document with outlined sections.
 * Use Google maps street/satellite views to help
 * Constraints
   * Available information online
-	* No / Limited access to council records
-	
+  * No / Limited access to council records
+

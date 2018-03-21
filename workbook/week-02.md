@@ -10,8 +10,9 @@
 * https://wiki.openstreetmap.org/wiki/Develop
 * https://developers.google.com/maps/documentation/javascript/examples/rectangle-event
 * https://help.openstreetmap.org/questions/4014/how-can-i-find-the-total-length-of-roads-in-an-area
-	
+
 Use OpenStreetMaps to generate OSM JSON file of all of the streets within this area
+
 * http://overpass-turbo.eu/#
 * https://gist.github.com/dylanpinn/d65e5758d247476261f55c96a054ef17
 * Need to get all of the ways
@@ -24,6 +25,6 @@ Use OpenStreetMaps to generate OSM JSON file of all of the streets within this a
 * Sum the distance by lane width
   * Need default if not provided
   * https://en.wikipedia.org/wiki/Lane
-	  * For information regarding lane width
-	* This gives estimate of area of road
+    * For information regarding lane width
+  * This gives estimate of area of road
 * Sum all of the road areas
