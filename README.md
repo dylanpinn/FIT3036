@@ -6,3 +6,7 @@ This is the repository for the Monash 3rd year computer science project.
 
 - For a given square kilometre in Victoria, Australia, calculate the total area
     of the roads.
+
+## Resources
+
+- ![Trello Board](https://trello.com/b/fgAiXzRE)
