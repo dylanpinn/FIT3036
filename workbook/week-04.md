@@ -1,9 +1,9 @@
 # Week 4
 
 Created Trello Board with the following lists
-* TODO
-* DOING
-* DONE
+* todo
+* doing
+* done
 
 Created tickets for each of the sections of the Project Specification
 
