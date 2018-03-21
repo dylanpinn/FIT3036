@@ -1,0 +1,8 @@
+plugins:
+  markdownlint:
+    enabled: true
+  editorconfig:
+    enabled: true
+    channel: beta
+    config:
+      editorconfig: .editorconfig
