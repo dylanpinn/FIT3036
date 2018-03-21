@@ -18,18 +18,22 @@ Started preparing LaTex project proposal document with outlined sections.
 ## Project Requirements
 
 1. Functional Requirements (e.g., web hosting, platform…)
-2. Non-functional Requirements
+1. Non-functional Requirements
 
 ## Project Plan
 
 1. Overview - Project objectives, requirements and constraints.
-2. Risk Analysis - What are the main project risks, their probabilities and risk reduction strategies?
-3. Resource Requirements - Hardware and software (more specific than Functional Requirements)
-4. Schedule - Corresponding to tasks identified above (e.g. in a Gantt chart, PERT chart, Kanban, etc...)
+1. Risk Analysis - What are the main project risks, their probabilities and
+   risk reduction strategies?
+1. Resource Requirements - Hardware and software (more specific than Functional
+   Requirements)
+1. Schedule - Corresponding to tasks identified above (e.g. in a Gantt chart,
+   PERT chart, Kanban, etc...)
 
 ## Overview
 
-* For a given 1 square km area in Victoria, calculate the surface area of all of the roads within that area.
+* For a given 1 square km area in Victoria, calculate the surface area of all
+  of the roads within that area.
 * Use Google maps street/satellite views to help
 * Constraints
   * Available information online
