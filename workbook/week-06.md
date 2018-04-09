@@ -2,7 +2,8 @@
 
 ## Project Plan - Schedule
 
-- Create Gantt chart using [Team Gantt](https://teamgantt.com). This allows working back from the due date to correctly meet deadlines.
+- Create Gantt chart using [Team Gantt](https://teamgantt.com). This allows
+  working back from the due date to correctly meet deadlines.
 
 ## Project Plan - Risk
 

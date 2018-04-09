@@ -28,4 +28,5 @@ Use OpenStreetMaps to generate OSM JSON file of all of the streets within this a
   * [Default lane length](https://en.wikipedia.org/wiki/Lane)
     * For information regarding lane width
   * This gives estimate of area of road
-* Sum all of the road areas
+* Sum all of the road area
+
