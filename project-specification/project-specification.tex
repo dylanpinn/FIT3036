@@ -17,15 +17,60 @@
 
 \section{Introduction}
 
+% TODO: Improve introduction
+
+This project specification outlines the plan to design, implement, test and deliver the FIT3036 Computer Science project.
+
+Go through
+
+project requirements
+project plan
+external design
+Internal design
+software architecture
+test plan
+
 \section{Project Requirements}
+
+% TODO: Add introduction
+
+2. Project Requirements
+	1. Functional Requirements (e.g., web hosting, platform…)
+	2. Non-functional Requirements
 
 \subsection{Functional Requirements}
 
+% TODO: Improve section
+
+Project Requirements - Functional Requirements
+• System shall allow a user to select a 1 square km area on Google Maps
+• System shall calculate the total area of the roads in the nominated square area
+
 \subsection{Non-functional Requirements}
+
+% TODO: Improve section
+
+Project Requirements - Non-functional requirements
+• System shall be available via the Internet
+• System shall be testable
+• System shall be cheap to host
+• System shall be easy to deploy
+* System shall be easy to maintain
 
 \section{Project Plan}
 
+% TODO: Add section introduction
+
+3. Project Plan
+	1. Overview - Project objectives, requirements and constraints.
+	2. Risk Analysis - What are the main project risks, their probabilities and risk reduction strategies?
+	3. Resource Requirements - Hardware and software (more specific than Functional Requirements)
+	4. Schedule - Corresponding to tasks identified above (e.g. in a Gantt chart, PERT chart, Kanban, etc...)
+
+
 \subsection{Overview}
+
+% TODO: Improve Overview
 
 \textbf{Project objectives:} Our company secured a contract for a local council in Victoria to re-surface roads in a designated square kilometre area.
 
@@ -49,9 +94,33 @@ No / Limited access to council records
 
 % TODO: Attach Google Docs sheet and expand
 
+Done some risks in attached document. Need to expand and add more if time permits.
+
 \subsection{Resource Requirements}
 
+% TODO: Finalise resource requirements
+
+Hardware is all SASS, PASS, IASS solutions to keep costs down and ease of use.
+
+Hardware:
+
+AWS to host all of the required components:
+AWS Lambda to run backend code
+AWS API Gateway to route backend requests to lambda functions
+AWS S3 to host frontend code
+AWS Cloudfront - CDN for frontend
+AWS Cloudformation - Provision infrastructure
+CI/CD tools to build, test and deploy
+Software:
+
+Local development environment
+NodeJS to build frontend
+Latex to build documentation
+Go Programming language to build backend
+
 \subsection{Schedule}
+
+% TODO: Finalise schedule
 
 Created a Gantt Chart, as seen in figure \ref{fig:gantt}, from our Trello board using TeamGantt. This allows working back from the due date to meet deadlines.
 
@@ -64,7 +133,17 @@ Created a Gantt Chart, as seen in figure \ref{fig:gantt}, from our Trello board 
 
 \section{External Design}
 
+% TODO: Add section introduction
+
+4. External Design - Externally observable features of your simulation: input, output, performance.
+	1. User Interface - How to run the software
+	2. Functionality - Any externally available functions not covered above.
+	3. Performance - Time and space performance characteristics of your software.
+
+
 \subsection{User Interface}
+
+% TODO: Finalise User interface
 
 Created mockup figure \ref{fig:mockup}. %TODO: Add square to mockup.
 
@@ -84,20 +163,146 @@ There is help information on the page.
 
 \subsection{Functionality}
 
+% TODO: Finalise functionality
+
+API will be created that will take 4 position parameters, each boundary is made up of a Latitude and Longitude.
+
+This method calls the Open Street Maps API with these params to return all of the streets within the boundaries.
+
+This is then passed to a method that will use the Haversine distance calculation to calculate distance between all of the nodes. If lane information is provided then this is multiplied by by the default lane length (3.5m) if not then the default is used. (NEED TO CHECK IF HAS MULTIPLE LANES). This is then summed and returned.
+
+Lane width 3.5m https://www.driverknowledgetests.com/resources/road-widths/
+
+Haversine formula https://en.wikipedia.org/wiki/Haversine_formula
+
+Another API is exposed for the frontend UI.
+
+It takes 4 position parameters, each with boundary is made up of a Latitude and Longitude. This will calculate the total area of the 4 points and return it.
+
+Calculate the area of 4 points:
+http://mathforum.org/library/drmath/view/63767.html
+
 \subsection{Performance}
+
+% TODO: Finalise Performance
+
+Time:
+We would like the response from the API to calculate the area of the square to be very fast (< 0.5s) as this will run whenever, the area is changed.
+
+The main method that will calculate the total surface area of the all of the roads will also need to be sum what fast as we don't want the user to have to wait a long time while this is calculated. < 1m
+
+Space:
+AWS Lambda, which is where the backend code is run, can run between 128MB-3008MB memory to run the method. The default is 1024MB which is what I will be using.
+
 
 \section{Internal Design}
 
+5. Internal Design - Description of how the software is meant to work together (e.g. ‘the harvester module dumps data to the data logging module’…; illustrate with use cases or sequence diagrams)
+
+% TODO: Finalise internal design
+% TODO: Add sequence diagrams
+
+Calculate Total Surface Area:
+
+User drags or resizes square in Map.
+These params are sent to the backend service
+This calculates the total surface area
+This is returned to the user
+Calculate Total Surface Area of Roads in Area:
+
+User requests to calculate total surface area
+Params are sent to calculateSurfaceAreaofRoads
+These are used to call OpenStreetMap API
+Iterate over data and call calculateDistance
+pass response to addLaneWidth
+result summed
+return to user
+
+
 \section{Software Architecture}
+
+6. Software Architecture - Overall structure of the code; high-level class structure (if any, e.g. via UML class diagrams …)
+
+
+% TODO: Finalise Software Architecture
+% TODO: Add class diagram
+
+Classes made up of methods that help calculate the areas.
 
 \section{Test Plan}
 
+7. Test Plan
+	1. Test coverage - Test coverage in the test plan states what requirements will be verified during what stages of the product life. (e.g. JUnit testing during phase X…)
+	2. Test methods - Test methods in the test plan state how test coverage will be implemented (e.g. unit testing, acceptance testing, ...)
+	3. Sample Test Cases - what data will be collected, and how that data will be stored and reported. One outcome of a successful test plan should be a record or report of the verification of all design specifications and requirements as agreed upon by all parties.
+
+% TODO: Add section introduction
+
+Test Plan
+
+1. Test coverage - Test coverage in the test plan states what requirements will be verified during what stages of the product life. (e.g. JUnit testing during phase X…)
+2. Test methods - Test methods in the test plan state how test coverage will be implemented (e.g. unit testing, acceptance testing, ...)
+3. Sample Test Cases - what data will be collected, and how that data will be stored and reported. One outcome of a successful test plan should be a record or report of the verification of all design specifications and requirements as agreed upon by all parties.
+
 \subsection{Test coverage}
+
+% TODO: Finalise test coverage
+
+Use jest and react-testing-library for testing frontend components.
+
+Use Go inbuilt testing package for unit testing backend classes, functions.
+
+These will automatically be run through development using tools to test runners.
+
+Tests will be run automatically through CI/CD service before deploying changes to ensure that functionality is enforced.
 
 \subsection{Test methods}
 
+% TODO: Finalise test methods
+
+Unit tests on all class methods. This verifies that the individual functions behave as expected.
+
+Integration tests for API backends to ensure that correct response is returned for known parameters.
+
+Unit test frontend components to ensure that they behave and interact in the correct manor.
+
+Acceptance testing to make sure requirements are met.
+
+Able to generate test coverage reports for front end and back end code. 80-100% test coverage is acceptable.
+
+System tests will test the system as a whole and test the entire functionality.
+
+
 \subsection{Sample test cases}
 
+% TODO: Finalise sample test cases
+
+Test plan
+
+Test a known Area to calculate the total area.
+Test a known Distance to know the length of it.
+Test a known Area to sanity check the surface area of the roads within it.
+
 \section{References}
+
+8. References – References need to be provided in a correct and consistent format. Use BibTeX, EndNote, etc. to help in generating a correct list of references.
+
+% TODO: Finalise references
+% TODO: Generate reference file. Check against Monash IT reference style.
+
+Collate references from workbook entries
+
+React, NodeJS, Jest, React Testing Library, Go Lang, Go Testing Package.
+
+Open Street Maps.
+Default Lane width.
+
+https://www.pmi.org/learning/library/risk-analysis-project-management-7070
+
+AWS services
+
+Latex
+
+CI/CD - Travis
 
 \end{document}
