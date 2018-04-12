@@ -115,25 +115,42 @@ Done some risks in attached document. Need to expand and add more if time permit
 
 \subsection{Resource Requirements}
 
-% TODO: Finalise resource requirements
+\paragraph{Hardware:}
 
-Hardware is all SASS, PASS, IASS solutions to keep costs down and ease of use.
+We have decided to use as much Software as a Service (SaaS), Platform as a
+Service (PaaS) and Infrastructure as a Service (IaaS) solutions to keep costs
+down.
 
-Hardware:
+Amazon Web Services (AWS) has been chosen to use due to its comprehensive free
+tier and prior experience with the platform. The following AWS services are
+going to be utilised:
 
-AWS to host all of the required components:
-AWS Lambda to run backend code
-AWS API Gateway to route backend requests to lambda functions
-AWS S3 to host frontend code
-AWS Cloudfront - CDN for frontend
-AWS Cloudformation - Provision infrastructure
-CI/CD tools to build, test and deploy
-Software:
+\begin{itemize}
+  \item AWS Lambda --- Functions as service; allows running back-end code without
+    maintaining server infrastructure.
+  \item AWS API Gateway --- Allows creating public API endpoints for Lambda
+    functions
+  \item AWS S3 --- Cheap scalable storage to store front-end code.
+  \item AWS Cloudfront --- CDN for front-end code. Speeds up delivery by caching
+    content.
+  \item AWS Cloudformation --- Service to provision services on AWS.\@
+\end{itemize}
 
-Local development environment
-NodeJS to build frontend
-Latex to build documentation
-Go Programming language to build backend
+We are going to use continuous integration and continuous deployment using
+Travis which offers free plans for Open Source software. This allows us to use
+the latest devops practices to automate running tests and deploying the latest
+tested code.
+
+\paragraph{Software:}
+
+The following is an outline of the software required for the project:
+
+\begin{itemize}
+  \item Local development environment --- Code editor, IDE, terminal, etc.
+  \item NodeJS --- Required to build front-end code.
+  \item Go Programming Language --- Required to build back-end code.
+  \item \LaTex{} --- Required to build documentation.
+\end{itemize}
 
 \subsection{Schedule}
 
