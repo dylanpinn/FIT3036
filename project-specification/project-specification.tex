@@ -168,7 +168,6 @@ using TeamGantt. This allows working back from the due date to meet deadlines.
   2. Functionality - Any externally available functions not covered above.
   3. Performance - Time and space performance characteristics of your software.
 
-
 \subsection{User Interface}
 
 Created mock-up as seen in figure~\ref{fig:mockup}, main features are:
@@ -191,24 +190,21 @@ Created mock-up as seen in figure~\ref{fig:mockup}, main features are:
 
 \subsection{Functionality}
 
-% TODO: Finalise functionality
+An API will be created that will take 4 position parameters, each boundary is
+made up of a Latitude and Longitude. This data is used to call the  Open Street
+Maps API to return data about all of the streets within the area.
 
-API will be created that will take 4 position parameters, each boundary is made up of a Latitude and Longitude.
+This is then passed to a method that will use the Haversine distance calculation
+\autocite{hav:8} to calculate distance between all of the nodes. If number of
+lanes information is provided then this is multiplied by by the default lane
+width within Australia (3.5m) \autocite{lane:9} if not then we are assuming that
+the road is only 2 lanes wide. This is then summed and returned.
 
-This method calls the Open Street Maps API with these params to return all of the streets within the boundaries.
-
-This is then passed to a method that will use the Haversine distance calculation to calculate distance between all of the nodes. If lane information is provided then this is multiplied by by the default lane length (3.5m) if not then the default is used. (NEED TO CHECK IF HAS MULTIPLE LANES). This is then summed and returned.
-
-Lane width 3.5m https://www.driverknowledgetests.com/resources/road-widths/
-
-%Haversine formula https://en.wikipedia.org/wiki/Haversine_formula
-
-Another API is exposed for the frontend UI.
-
-It takes 4 position parameters, each with boundary is made up of a Latitude and Longitude. This will calculate the total area of the 4 points and return it.
-
-Calculate the area of 4 points:
-%http://mathforum.org/library/drmath/view/63767.html
+Another API is exposed for the front-end UI, it calculates the total area of the
+of the shape over the map. This has been included to help improve the UI.\@ The
+API method will take 4 position arguments, each a boundary, made up of a single
+latitude and longitude. This will calculate the surface area of the 4 points and
+return the area \autocite{math:10}.
 
 \subsection{Performance}
 
