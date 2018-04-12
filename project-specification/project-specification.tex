@@ -155,8 +155,8 @@ Created a Gantt Chart, as seen in figure~\ref{fig:gantt}, from our Trello board
 using TeamGantt. This allows working back from the due date to meet deadlines.
 
 \begin{figure}[H]
-\includegraphics[width=\textwidth]{gantt-chart}
-\caption{Gantt chart}\label{fig:gantt}
+  \includegraphics[width=\textwidth]{gantt-chart}
+  \caption{Gantt chart}\label{fig:gantt}
 \end{figure}
 
 \section{External Design}
@@ -171,22 +171,22 @@ using TeamGantt. This allows working back from the due date to meet deadlines.
 
 \subsection{User Interface}
 
-% TODO: Finalise User interface
+Created mock-up as seen in figure~\ref{fig:mockup}, main features are:
 
-Created mockup figure \ref{fig:mockup}. %TODO: Add square to mockup.
-
-Open webpage and presented with a large render of Google Maps. There is a square that can be positioned and sized over the map for the user to select the area to calculate.
-
-A calculation shows the total area of the shape over the map.
-
-The user then pushes the "Calculate" button to generate the surface area of the roads within the square.
-
-There is help information on the page.
+\begin{itemize}
+  \item Open webpage and user is presented with a large render of Google Maps.
+    There is a square that can be positioned and sized over the map for the user
+    to select the area to calculate.
+  \item A calculation shows the total area of the shape over the map. This is
+    updated whenever the user resizes or moves the square.
+  \item The user then pushes the ``Calculate'' button to generate the surface
+    area of the roads within the square.
+  \item There is help information on the page.
+\end{itemize}
 
 \begin{figure}[H]
   \includegraphics[width=\textwidth]{UI-mockup}
-  \caption{Application Mockup}
-  \label{fig:mockup}
+  \caption{Application Mock-up}\label{fig:mockup}
 \end{figure}
 
 \subsection{Functionality}
