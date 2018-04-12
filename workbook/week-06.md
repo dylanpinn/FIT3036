@@ -44,9 +44,9 @@ then this is multiplied by by the default lane length (3.5m) if not then the
 default is used. (NEED TO CHECK IF HAS MULTIPLE LANES). This is then summed and
 returned.
 
-Lane width 3.5m https://www.driverknowledgetests.com/resources/road-widths/
+Lane width 3.5m <https://www.driverknowledgetests.com/resources/road-widths/>
 
-Haversine formula https://en.wikipedia.org/wiki/Haversine_formula
+Haversine formula <https://en.wikipedia.org/wiki/Haversine_formula/>
 
 Another API is exposed for the frontend UI.
 
@@ -54,7 +54,7 @@ It takes 4 position parameters, each with boundary is made up of a Latitude and
 Longitude. This will calculate the total area of the 4 points and return it.
 
 Calculate the area of 4 points:
-http://mathforum.org/library/drmath/view/63767.html
+<http://mathforum.org/library/drmath/view/63767.html/>
 
 ## External Design - Performance
 
@@ -79,19 +79,26 @@ will be using.
 
 ## Test Plan - Coverage
 
-- These will automatically be run through development using tools to test runners.
-- Tests will be run automatically through CI/CD service before deploying changes to ensure that functionality is enforced.
+- These will automatically be run through development using tools to test
+  runners.
+- Tests will be run automatically through CI/CD service before deploying changes
+  to ensure that functionality is enforced.
 - Use jest and react-testing-library for testing frontend components.
 - Use Go inbuilt testing package for unit testing backend classes, functions.
 
 ## Test Plan - Test Methods
 
-- Unit tests on all class methods. This verifies that the individual functions behave as expected.
-- Integration tests for API backends to ensure that correct response is returned for known parameters.
-- Unit test frontend components to ensure that they behave and interact in the correct manor.
+- Unit tests on all class methods. This verifies that the individual functions
+  behave as expected.
+- Integration tests for API backends to ensure that correct response is returned
+  for known parameters.
+- Unit test frontend components to ensure that they behave and interact in the
+  correct manor.
 - Acceptance testing to make sure requirements are met.
-- Able to generate test coverage reports for front end and back end code. 80-100% test coverage is acceptable.
-- System tests will test the system as a whole and test the entire functionality.
+- Able to generate test coverage reports for front end and back end code.
+  80-100% test coverage is acceptable.
+- System tests will test the system as a whole and test the entire
+  functionality.
 
 ## Test Plan - Sample Test Cases
 
