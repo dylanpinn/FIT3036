@@ -208,16 +208,21 @@ return the area \autocite{math:10}.
 
 \subsection{Performance}
 
-% TODO: Finalise Performance
+When considering performance the two main points are time and space.
 
-Time:
-We would like the response from the API to calculate the area of the square to be very fast (< 0.5s) as this will run whenever, the area is changed.
+\paragraph{Time:}
 
-The main method that will calculate the total surface area of the all of the roads will also need to be sum what fast as we don't want the user to have to wait a long time while this is calculated. < 1m
+We would like the response from the API to calculate the area of the square to
+be very fast $(< 0.5s)$ as this will run whenever, the area is changed.
 
-Space:
-AWS Lambda, which is where the backend code is run, can run between 128MB-3008MB memory to run the method. The default is 1024MB which is what I will be using.
+The main method that will calculate the total surface area of the all of the
+roads will also need to be sum what fast as we don't want the user to have to
+wait a long time while this is calculated $(< 30s)$.
 
+\paragraph{Space:}
+
+The back-end code which runs on AWS Lambda, can run between 128--3008MB memory
+to run the method. The default is 1024MB which is what we will be using.
 
 \section{Internal Design}
 
@@ -306,8 +311,6 @@ Test plan
 Test a known Area to calculate the total area.
 Test a known Distance to know the length of it.
 Test a known Area to sanity check the surface area of the roads within it.
-
-% TODO: Put on new page
 
 \pagebreak
 
