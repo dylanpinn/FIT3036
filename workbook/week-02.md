@@ -29,4 +29,3 @@ Use OpenStreetMaps to generate OSM JSON file of all of the streets within this a
     * For information regarding lane width
   * This gives estimate of area of road
 * Sum all of the road area
-
