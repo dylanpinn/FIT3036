@@ -1,6 +1,8 @@
 version: "2"
 plugins:
-  markdownlint:
+  fixme:
+    enabled: true
+  markdownlnt:
     enabled: true
   editorconfig:
     enabled: true
