@@ -294,23 +294,19 @@ distance and calculate the area of a road.
 
 % TODO: Add section introduction
 
-% Test Plan
-
-% 1. Test coverage - Test coverage in the test plan states what requirements will be verified during what stages of the product life. (e.g. JUnit testing during phase X…)
-% 2. Test methods - Test methods in the test plan state how test coverage will be implemented (e.g. unit testing, acceptance testing, ...)
-% 3. Sample Test Cases - what data will be collected, and how that data will be stored and reported. One outcome of a successful test plan should be a record or report of the verification of all design specifications and requirements as agreed upon by all parties.
-
 \subsection{Test coverage}
 
-% TODO: Finalise test coverage
+We are going to use Jest \autocite{jest:11} and react-testing-library
+\autocite{rtl:12} to test the front-end components.
 
-% Use jest and react-testing-library for testing frontend components.
+To test the back-end code we can use the inbuilt testing package in Go
+\autocite{go:13}.
 
-% Use Go inbuilt testing package for unit testing backend classes, functions.
+These will automatically be run through development using test runners to run on
+code change.
 
-% These will automatically be run through development using tools to test runners.
-
-% Tests will be run automatically through CI/CD service before deploying changes to ensure that functionality is enforced.
+Tests will also be run automatically through the CI/CD service before deployment
+to ensure that that code is only deployed if the tests have passed.
 
 \subsection{Test methods}
 
