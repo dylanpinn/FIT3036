@@ -6,10 +6,16 @@
 \usepackage[style=apa]{biblatex}
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
 
 \bibliography{project-specification}
 
 \graphicspath{{images/}}
+
+\makeatletter
+\def\BState{\State\hskip-\ALG@thistlm}
+\makeatother
 
 \begin{document}
 
@@ -226,27 +232,47 @@ to run the method. The default is 1024MB which is what we will be using.
 
 \section{Internal Design}
 
-5. Internal Design - Description of how the software is meant to work together (e.g. ‘the harvester module dumps data to the data logging module’…; illustrate with use cases or sequence diagrams)
+The two main functions of the system are to calculate the total surface area of
+the selected area and to calculate the surface area of the roads within the same
+area.
 
-% TODO: Finalise internal design
-% TODO: Add sequence diagrams
+\paragraph{Calculate Total Surface Area:}
 
-Calculate Total Surface Area:
+These steps below are outlined in figure~\ref{fig:seq-total-area}
 
-User drags or resizes square in Map.
-These params are sent to the backend service
-This calculates the total surface area
-This is returned to the user
-Calculate Total Surface Area of Roads in Area:
+\begin{enumerate}
+  \item User drags or resizes square in Map.
+  \item These parameters are sent to the back-end service.
+  \item This calculates the total surface area.
+  \item This is returned to the user.
+\end{enumerate}
 
-User requests to calculate total surface area
-Params are sent to calculateSurfaceAreaofRoads
-These are used to call OpenStreetMap API
-Iterate over data and call calculateDistance
-pass response to addLaneWidth
-result summed
-return to user
+\begin{figure}[H]
+  \includegraphics[width=\textwidth]{sequence-diagram-calculate-total-surface-area}
+  \caption{Sequence Diagram --- Calculate Total Surface
+  Area}\label{fig:seq-total-area}
+\end{figure}
 
+\paragraph{Calculate Total Surface Area of Roads:}
+
+These steps below are outlined in figure~\ref{fig:seq-total-area-roads}
+
+\begin{enumerate}
+  \item User requests to calculate total surface area of roads.
+  \item These parameters are sent to the back-end service.
+  \item These are used to call OpenStreetMap API
+  \item It then iterates over data and calculates the distance of all of the
+    roads.
+  \item The area of these roads is then calculated with lane width.
+  \item These results are summed.
+  \item This is returned to the user.
+\end{enumerate}
+
+\begin{figure}[H]
+  \includegraphics[width=\textwidth]{sequence-diagram-calculate-total-surface-area-of-roads}
+  \caption{Sequence Diagram --- Calculate Total Surface Area of
+  Roads}\label{fig:seq-total-area-roads}
+\end{figure}
 
 \section{Software Architecture}
 
