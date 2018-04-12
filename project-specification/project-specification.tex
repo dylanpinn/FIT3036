@@ -1,12 +1,18 @@
 \documentclass[a4paper,11pt]{article}
 
 \usepackage[utf8]{inputenc}
-\usepackage[british]{babel}
+\usepackage[american]{babel}
+\usepackage{csquotes}
+\usepackage[style=apa]{biblatex}
 \usepackage{graphicx}
 \usepackage{float}
+
+\bibliography{project-specification}
+
 \graphicspath{{images/}}
 
 \begin{document}
+
 \title{FIT3036 --- Project Specification}
 \author{Dylan Pinn --- 24160547}
 \maketitle
@@ -74,23 +80,32 @@ The non-functional requirements are:
 
 % TODO: Improve Overview
 
-\textbf{Project objectives:} Our company secured a contract for a local council in Victoria to re-surface roads in a designated square kilometre area.
+\paragraph{Project Objectives:}
 
-Can use:
-Google Maps and related
-Satellite/aerial views
-Work out the total area of roads in the nominated square kilometre to give a quote.
-Need to write related code along with an elegant GUI to support the calculations.
+Our company secured a contract for a local council in Victoria to re-surface
+roads in a designated kilometre area. The objectives are to design, implement,
+test and deliver a system that will perform these calculations and display the
+result to the user.
 
-Requirements:
-Use any method to calculate the total area of the roads.
-Has to be testable.
-Easy to use GUI.
+\paragraph{Requirements:}
 
-Constraints:
-Only have access to publicly available data.
-Available information online
-No / Limited access to council records
+We are to use Google Maps and related products and any satellite/aerial views.
+The project involves writing the related code, with an elegant GUI to support
+calculations.
+
+% TODO: Add citation to online pdf for Project Intro
+% \autocite[1]{INTRO:1}
+
+\paragraph{Constraints:}
+
+We have the following constraints on the project:
+
+\begin{itemize}
+  \item Only have access to publicly available data.
+  \item Limited to available information online.
+  \item No / Limited access to council records.
+  \item Project must be finalised by the end of week 12.
+\end{itemize}
 
 \subsection{Risk Analysis}
 
@@ -175,14 +190,14 @@ This is then passed to a method that will use the Haversine distance calculation
 
 Lane width 3.5m https://www.driverknowledgetests.com/resources/road-widths/
 
-Haversine formula https://en.wikipedia.org/wiki/Haversine_formula
+%Haversine formula https://en.wikipedia.org/wiki/Haversine_formula
 
 Another API is exposed for the frontend UI.
 
 It takes 4 position parameters, each with boundary is made up of a Latitude and Longitude. This will calculate the total area of the 4 points and return it.
 
 Calculate the area of 4 points:
-http://mathforum.org/library/drmath/view/63767.html
+%http://mathforum.org/library/drmath/view/63767.html
 
 \subsection{Performance}
 
@@ -285,7 +300,13 @@ Test a known Area to calculate the total area.
 Test a known Distance to know the length of it.
 Test a known Area to sanity check the surface area of the roads within it.
 
+% TODO: Put on new page
+
+\pagebreak
+
 \section{References}
+
+%\printbibliography
 
 8. References – References need to be provided in a correct and consistent format. Use BibTeX, EndNote, etc. to help in generating a correct list of references.
 
@@ -299,7 +320,7 @@ React, NodeJS, Jest, React Testing Library, Go Lang, Go Testing Package.
 Open Street Maps.
 Default Lane width.
 
-https://www.pmi.org/learning/library/risk-analysis-project-management-7070
+%https://www.pmi.org/learning/library/risk-analysis-project-management-7070
 
 AWS services
 
