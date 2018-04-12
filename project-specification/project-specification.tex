@@ -81,7 +81,6 @@ The non-functional requirements are:
 %   3. Resource Requirements - Hardware and software (more specific than Functional Requirements)
 %   4. Schedule - Corresponding to tasks identified above (e.g. in a Gantt chart, PERT chart, Kanban, etc...)
 
-
 \subsection{Overview}
 
 \paragraph{Project Objectives:}
@@ -110,9 +109,14 @@ We have the following constraints on the project:
 
 \subsection{Risk Analysis}
 
-% TODO: Attach Google Docs sheet and expand
+We have performed a risk analysis of the project and these and are outlined in
+figure~\ref{fig:risk-register}. This includes the probability, potential
+responses and impact to the project.
 
-% Done some risks in attached document. Need to expand and add more if time permits.
+\begin{figure}[H]
+  \includegraphics[width=\textwidth]{risk-register}
+  \caption{Risk Register}\label{fig:risk-register}
+\end{figure}
 
 \subsection{Resource Requirements}
 
@@ -158,7 +162,8 @@ The following is an outline of the software required for the project:
 \subsection{Schedule}
 
 Created a Gantt Chart, as seen in figure~\ref{fig:gantt}, from our Trello board
-using TeamGantt. This allows working back from the due date to meet deadlines.
+\autocite{trel:15} using TeamGantt. This allows working back from the due date
+to meet deadlines.
 
 \begin{figure}[H]
   \includegraphics[width=\textwidth]{gantt-chart}
@@ -198,7 +203,8 @@ Created mock-up as seen in figure~\ref{fig:mockup}, main features are:
 
 An API will be created that will take 4 position parameters, each boundary is
 made up of a Latitude and Longitude. This data is used to call the  Open Street
-Maps API to return data about all of the streets within the area.
+Maps API \autocite{osm:14} to return data about all of the streets within the
+area.
 
 This is then passed to a method that will use the Haversine distance calculation
 \autocite{hav:8} to calculate distance between all of the nodes. If number of
@@ -343,19 +349,5 @@ program. These will include:
 \section{References}
 
 \printbibliography{}
-
-% 8. References – References need to be provided in a correct and consistent format. Use BibTeX, EndNote, etc. to help in generating a correct list of references.
-
-% TODO: Finalise references
-% TODO: Generate reference file. Check against Monash IT reference style.
-
-%Collate references from workbook entries
-
-%React, NodeJS, Jest, React Testing Library, Go Lang, Go Testing Package.
-
-%Open Street Maps.
-%Default Lane width.
-
-%%https://www.pmi.org/learning/library/risk-analysis-project-management-7070
 
 \end{document}
