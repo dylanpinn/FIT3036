@@ -1,7 +1,7 @@
 \documentclass[a4paper,11pt]{article}
 
 \usepackage[utf8]{inputenc}
-\usepackage[american]{babel}
+\usepackage[british]{babel}
 \usepackage{csquotes}
 \usepackage[style=apa]{biblatex}
 \usepackage{graphicx}
@@ -78,8 +78,6 @@ The non-functional requirements are:
 
 \subsection{Overview}
 
-% TODO: Improve Overview
-
 \paragraph{Project Objectives:}
 
 Our company secured a contract for a local council in Victoria to re-surface
@@ -91,10 +89,7 @@ result to the user.
 
 We are to use Google Maps and related products and any satellite/aerial views.
 The project involves writing the related code, with an elegant GUI to support
-calculations.
-
-% TODO: Add citation to online pdf for Project Intro
-% \autocite[1]{INTRO:1}
+calculations. \autocite[2]{intro:1}
 
 \paragraph{Constraints:}
 
@@ -126,18 +121,20 @@ tier and prior experience with the platform. The following AWS services are
 going to be utilised:
 
 \begin{itemize}
-  \item AWS Lambda --- Functions as service; allows running back-end code without
-    maintaining server infrastructure.
+  \item AWS Lambda --- Functions as service; allows running back-end code
+    without maintaining server infrastructure \autocite{aws:2}.
   \item AWS API Gateway --- Allows creating public API endpoints for Lambda
-    functions
-  \item AWS S3 --- Cheap scalable storage to store front-end code.
+    functions \autocite{aws:3}.
+  \item AWS S3 --- Cheap scalable storage to store front-end code
+    \autocite{aws:4}.
   \item AWS Cloudfront --- CDN for front-end code. Speeds up delivery by caching
-    content.
-  \item AWS Cloudformation --- Service to provision services on AWS.\@
+    content \autocite{aws:5}.
+  \item AWS Cloudformation --- Service to provision services on AWS
+    \autocite{aws:6}
 \end{itemize}
 
 We are going to use continuous integration and continuous deployment using
-Travis which offers free plans for Open Source software. This allows us to use
+Travis CI which offers free plans for Open Source software \autocite{trci:7}. This allows us to use
 the latest devops practices to automate running tests and deploying the latest
 tested code.
 
@@ -153,6 +150,8 @@ The following is an outline of the software required for the project:
 \end{itemize}
 
 \subsection{Schedule}
+
+Created a Gantt Chart, as seen in figure \ref{fig:gantt}, from our Trello board using TeamGantt. This allows working back from the due date to meet deadlines.
 
 % TODO: Finalise schedule
 
@@ -323,7 +322,7 @@ Test a known Area to sanity check the surface area of the roads within it.
 
 \section{References}
 
-%\printbibliography
+\printbibliography{}
 
 8. References – References need to be provided in a correct and consistent format. Use BibTeX, EndNote, etc. to help in generating a correct list of references.
 
