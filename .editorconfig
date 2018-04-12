@@ -11,3 +11,4 @@ indent_size = 2
 [*.png]
 charset = unset
 indent_style = unset
+end_of_line = unset
