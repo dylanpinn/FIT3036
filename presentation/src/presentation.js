@@ -43,11 +43,29 @@ export default class Presentation extends React.Component {
       >
         <Slide transition={['zoom']} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-            Spectacle Boilerplate
+            FIT3036 &ndash; Computer Science Project
           </Heading>
-          <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-            open the presentation/index.js file to get started
+          <Text margin="10px 0 0" textColor="tertiary" size={6} bold>
+            Dylan Pinn &mdash; 24160547
           </Text>
+        </Slide>
+        <Slide>
+          <Heading>Overview</Heading>
+        </Slide>
+        <Slide>
+          <Heading>Aims</Heading>
+        </Slide>
+        <Slide>
+          <Heading>Rationale</Heading>
+        </Slide>
+        <Slide>
+          <Heading>Demo</Heading>
+        </Slide>
+        <Slide>
+          <Heading>Discussion</Heading>
+        </Slide>
+        <Slide>
+          <Heading>Conclusion</Heading>
         </Slide>
         <Slide transition={['fade']} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>
