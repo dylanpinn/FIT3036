@@ -11,7 +11,7 @@ import {
   List,
   Quote,
   Slide,
-  Text,
+  Text
 } from 'spectacle';
 
 // Import theme
@@ -22,14 +22,14 @@ require('normalize.css');
 
 const theme = createTheme(
   {
-    primary: 'white',
-    secondary: '#1F2022',
-    tertiary: '#03A9FC',
-    quartenary: '#CECECE',
+    primary: '#fd4142',
+    secondary: '#3ec9f0',
+    tertiary: '#f0f2eb',
+    quartenary: '#797979'
   },
   {
-    primary: 'Montserrat',
-    secondary: 'Helvetica',
+    primary: 'Yanone Kaffeesatz',
+    secondary: 'Lato'
   }
 );
 
@@ -37,75 +37,44 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Deck
-        transition={['zoom', 'slide']}
+        transition={['fade', 'slide']}
         transitionDuration={500}
         theme={theme}
       >
-        <Slide transition={['zoom']} bgColor="primary">
+        <Slide transition={['zoom']} bgColor="tertiary">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
             FIT3036 &ndash; Computer Science Project
           </Heading>
-          <Text margin="10px 0 0" textColor="tertiary" size={6} bold>
+          <Text margin="10px 0 0" textColor="quartenary" size={6}>
             Dylan Pinn &mdash; 24160547
           </Text>
         </Slide>
-        <Slide>
+        <Slide bgColor="secondary">
           <Heading>Overview</Heading>
         </Slide>
-        <Slide>
-          <Heading>Aims</Heading>
-        </Slide>
-        <Slide>
-          <Heading>Rationale</Heading>
-        </Slide>
-        <Slide>
-          <Heading>Demo</Heading>
-        </Slide>
-        <Slide>
-          <Heading>Discussion</Heading>
-        </Slide>
-        <Slide>
-          <Heading>Conclusion</Heading>
-        </Slide>
         <Slide transition={['fade']} bgColor="tertiary">
-          <Heading size={6} textColor="primary" caps>
-            Typography
-          </Heading>
-          <Heading size={1} textColor="secondary">
-            Heading 1
-          </Heading>
-          <Heading size={2} textColor="secondary">
-            Heading 2
-          </Heading>
-          <Heading size={3} textColor="secondary">
-            Heading 3
-          </Heading>
-          <Heading size={4} textColor="secondary">
-            Heading 4
-          </Heading>
-          <Heading size={5} textColor="secondary">
-            Heading 5
-          </Heading>
-          <Text size={6} textColor="secondary">
-            Standard text
-          </Text>
-        </Slide>
-        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>
-            Standard List
-          </Heading>
+          <Heading textColor="secondary">Objectives</Heading>
           <List>
-            <ListItem>Item 1</ListItem>
-            <ListItem>Item 2</ListItem>
-            <ListItem>Item 3</ListItem>
-            <ListItem>Item 4</ListItem>
+            <ListItem>
+              Design &amp; Develop Surface Area Calculator for Roads
+            </ListItem>
+            <ListItem>Use Google Maps or similar tools</ListItem>
           </List>
         </Slide>
-        <Slide transition={['fade']} bgColor="secondary" textColor="primary">
-          <BlockQuote>
-            <Quote>Example Quote</Quote>
-            <Cite>Author</Cite>
-          </BlockQuote>
+        <Slide bgColor="primary">
+          <Heading>Aims</Heading>
+        </Slide>
+        <Slide bgColor="secondary">
+          <Heading>Rationale</Heading>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading>Demo</Heading>
+        </Slide>
+        <Slide bgColor="secondary">
+          <Heading>Discussion</Heading>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading>Conclusion</Heading>
         </Slide>
       </Deck>
     );
