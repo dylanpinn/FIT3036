@@ -1,19 +1,6 @@
 ## Background
 
-* [ ] include a review of academic literature used when preparing for the
-      project.
-* [ ] any research leading up to enabling the current project to happen (e.g.
-      current literature, existing case studies, existing studies)
-* [ ] datasets used in your current project, including any academic literature
-      on the background of the dataset (e.g. a paper by the dataset's authors or
-      info on how it was made)
-* [x] project info: main project risks, their probabilities and risk reduction
-      strategies, risks actually encountered
-* [ ] resource requirements (hardware and software)
-* [ ] tasks required and their dependency relations in producing the final
-      project; as well as a timeline of the final completed project.
-
-### Project Info
+## Project Info
 
 Main project risks (probability)
 
@@ -37,9 +24,9 @@ Risks actually encountered
 * Finding time to complete the project while working full time and completing
   assessments for other subjects.
 
-### Resource Requirements
+## Resource Requirements
 
-#### Hardware
+### Hardware
 
 We have decided to use as much Software as a Service (SaaS), Platform as a
 Service (PaaS) and Infrastructure as a Service (IaaS) solutions to keep costs
@@ -63,7 +50,7 @@ Travis CI which offers free plans for Open Source software (CI, 2018). This
 allows us to use the latest devops practices to automate running tests and
 deploying the latest tested code.
 
-#### Software
+### Software
 
 The following is an outline of the software required for the project:
 
