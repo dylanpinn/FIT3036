@@ -6,7 +6,7 @@ Main project risks (probability)
 
 * Cannot find appropriate road data for calculations. (medium)
 * Cannot access data from OpenStreetMap API. (low)
-* Google Maps offline. (low)
+* Google Maps off-line. (low)
 * Problems with infrastructure. (low)
 * Completing the project on time (medium)
 
@@ -59,3 +59,16 @@ The following is an outline of the software required for the project:
 * Go Programming Language — Required to build back-end code.
 * LATEX — Required to build documentation.
 * NodeJS - Required to build presentation.
+
+## Tasks
+
+* Project Plan
+* Project
+  * Front End
+  * Back End
+* Presentation
+* Final Report
+* Test Plan
+* Workbook
+
+<!-- TODO: Add Gantt chart. -->
