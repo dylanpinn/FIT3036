@@ -102,6 +102,18 @@ export default class Presentation extends React.Component {
           <Heading>Discussion</Heading>
         </Slide>
         <Slide transition={['fade']} bgColor="secondary">
+          <Heading textColor="primary">Challenges</Heading>
+          <List textColor="primary">
+            <ListItem>
+              The OpenStreetMap API returns data outside of the bounds.
+            </ListItem>
+            <ListItem>
+              Google Maps API does not have an API to return road information
+              within an area.
+            </ListItem>
+          </List>
+        </Slide>
+        <Slide transition={['fade']} bgColor="secondary">
           <Heading textColor="primary">Future Work</Heading>
           <List textColor="primary">
             <ListItem>System Tests</ListItem>
