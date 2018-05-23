@@ -2,8 +2,8 @@
 
 ## Requirements
 
-- [NodeJS] (https://nodejs.org/en/)
-- [Yarn] (https://yarnpkg.com/en/)
+- [NodeJS](https://nodejs.org/en/)
+- [Yarn](https://yarnpkg.com/en/)
 
 ## Setup
 
