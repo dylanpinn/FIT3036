@@ -12,14 +12,11 @@ require('normalize.css');
 
 const theme = createTheme(
   {
-    primary: '#fd4142',
-    secondary: '#3ec9f0',
-    tertiary: '#f0f2eb',
-    quartenary: '#797979'
+    primary: '#3ec9f0',
+    secondary: '#fff'
   },
   {
-    primary: 'Yanone Kaffeesatz',
-    secondary: 'Lato'
+    primary: 'Yanone Kaffeesatz'
   }
 );
 
@@ -31,20 +28,20 @@ export default class Presentation extends React.Component {
         transitionDuration={500}
         theme={theme}
       >
-        <Slide transition={['zoom']} bgColor="tertiary">
-          <Heading size={1} fit caps lineHeight={1} textColor="secondary">
+        <Slide transition={['zoom']}>
+          <Heading size={1} fit caps lineHeight={1}>
             FIT3036 &ndash; Computer Science Project
           </Heading>
-          <Text margin="10px 0 0" textColor="quartenary" size={6}>
+          <Text margin="10px 0 0" size={6}>
             Dylan Pinn &mdash; 24160547
           </Text>
         </Slide>
-        <Slide bgColor="secondary">
+        <Slide>
           <Heading>Overview</Heading>
         </Slide>
-        <Slide transition={['fade']} bgColor="tertiary">
-          <Heading textColor="secondary">Objectives</Heading>
-          <List>
+        <Slide transition={['fade']} bgColor="secondary">
+          <Heading textColor="primary">Objectives</Heading>
+          <List textColor="primary">
             <ListItem>
               Design &amp; Develop Surface Area Calculator for Roads
             </ListItem>
@@ -52,11 +49,11 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
         <Slide bgColor="primary">
-          <Heading>Aims</Heading>
+          <Heading textColor="#fff">Aims</Heading>
         </Slide>
-        <Slide transition={['fade']} bgColor="tertiary">
-          <Heading textColor="secondary">Requirements</Heading>
-          <List>
+        <Slide transition={['fade']} bgColor="secondary">
+          <Heading textColor="primary">Requirements</Heading>
+          <List textColor="primary">
             <ListItem>Easy to use</ListItem>
             <ListItem>Fast</ListItem>
             <ListItem>
@@ -64,13 +61,24 @@ export default class Presentation extends React.Component {
             </ListItem>
           </List>
         </Slide>
-        <Slide bgColor="secondary">
+        <Slide bgColor="primary">
           <Heading>Rationale</Heading>
+        </Slide>
+        <Slide transition={['fade']} bgColor="secondary">
+          <Heading textColor="primary">Research</Heading>
+          <List textColor="primary">
+            <ListItem>Image Processing</ListItem>
+            <ListItem>Raw Data</ListItem>
+            <List style={{ paddingLeft: '2em' }}>
+              <ListItem>OpenStreetMap</ListItem>
+              <ListItem>Google Maps</ListItem>
+            </List>
+          </List>
         </Slide>
         <Slide bgColor="primary">
           <Heading>Demo</Heading>
         </Slide>
-        <Slide bgColor="secondary">
+        <Slide bgColor="primary">
           <Heading>Discussion</Heading>
         </Slide>
         <Slide bgColor="primary">
