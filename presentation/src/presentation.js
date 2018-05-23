@@ -70,8 +70,8 @@ export default class Presentation extends React.Component {
             <ListItem>Image Processing</ListItem>
             <ListItem>Raw Data</ListItem>
             <List style={{ paddingLeft: '2em' }}>
-              <ListItem>OpenStreetMap</ListItem>
               <ListItem>Google Maps</ListItem>
+              <ListItem>OpenStreetMap</ListItem>
             </List>
           </List>
         </Slide>
