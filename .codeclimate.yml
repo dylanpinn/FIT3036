@@ -9,5 +9,12 @@ plugins:
     channel: beta
     config:
       editorconfig: .editorconfig
+  eslint:
+    enabled: true
+    channel: "eslint-4"
+    config:
+      config: presentation/.eslintrc.json
+  stylelint:
+    enabled: true
 exclude_patterns:
   - "**/*.png"
