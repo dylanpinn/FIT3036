@@ -2,12 +2,19 @@ version: "2"
 plugins:
   fixme:
     enabled: true
-  markdownlnt:
+  markdownlint:
     enabled: true
   editorconfig:
     enabled: true
     channel: beta
     config:
       editorconfig: .editorconfig
+  eslint:
+    enabled: true
+    channel: "eslint-4"
+    config:
+      config: presentation/.eslintrc.json
+  stylelint:
+    enabled: true
 exclude_patterns:
   - "**/*.png"
