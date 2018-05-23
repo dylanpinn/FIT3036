@@ -75,11 +75,39 @@ export default class Presentation extends React.Component {
             </List>
           </List>
         </Slide>
+        <Slide transition={['fade']} bgColor="secondary">
+          <Heading textColor="primary">Method</Heading>
+          <List textColor="primary">
+            <ListItem>Frontend</ListItem>
+            <List style={{ paddingLeft: '2em' }}>
+              <ListItem>React App</ListItem>
+              <ListItem>Google Map API</ListItem>
+            </List>
+            <ListItem>Backend</ListItem>
+            <List style={{ paddingLeft: '2em' }}>
+              <ListItem>Go API server</ListItem>
+              <ListItem>OpenStreetMap API</ListItem>
+            </List>
+            <ListItem>Infrastructure</ListItem>
+            <List style={{ paddingLeft: '2em' }}>
+              <ListItem>Serverless using AWS</ListItem>
+              <ListItem>Lambda, API Gateway, S3, Cloudfront</ListItem>
+            </List>
+          </List>
+        </Slide>
         <Slide bgColor="primary">
           <Heading>Demo</Heading>
         </Slide>
         <Slide bgColor="primary">
           <Heading>Discussion</Heading>
+        </Slide>
+        <Slide transition={['fade']} bgColor="secondary">
+          <Heading textColor="primary">Future Work</Heading>
+          <List textColor="primary">
+            <ListItem>System Tests</ListItem>
+            <ListItem>Address Search</ListItem>
+            <ListItem>List roads with individual area in Frontend</ListItem>
+          </List>
         </Slide>
         <Slide bgColor="primary">
           <Heading>Conclusion</Heading>
