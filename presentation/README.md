@@ -1,11 +1,16 @@
 # FIT3036 - Presentation
 
+Built using [Spectacle](https://github.com/FormidableLabs/spectacle)
+
 ## Requirements
 
 - [NodeJS](https://nodejs.org/en/)
 - [Yarn](https://yarnpkg.com/en/)
 
 ## Setup
+
+1. `yarn install`
+2. `yarn start`
 
 ## Presentation Instructions
 
