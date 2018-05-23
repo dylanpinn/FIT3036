@@ -54,6 +54,16 @@ export default class Presentation extends React.Component {
         <Slide bgColor="primary">
           <Heading>Aims</Heading>
         </Slide>
+        <Slide transition={['fade']} bgColor="tertiary">
+          <Heading textColor="secondary">Requirements</Heading>
+          <List>
+            <ListItem>Easy to use</ListItem>
+            <ListItem>Fast</ListItem>
+            <ListItem>
+              Reasonably<sup>*</sup> accurate
+            </ListItem>
+          </List>
+        </Slide>
         <Slide bgColor="secondary">
           <Heading>Rationale</Heading>
         </Slide>
