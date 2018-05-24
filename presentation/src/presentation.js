@@ -120,7 +120,7 @@ export default class Presentation extends React.Component {
             <ListItem>Address Search</ListItem>
             <ListItem>List roads with individual area in Frontend</ListItem>
             <ListItem>
-              Improve accuracy by including points upto bounds
+              Improve accuracy by including points up to bounds
             </ListItem>
           </List>
         </Slide>
