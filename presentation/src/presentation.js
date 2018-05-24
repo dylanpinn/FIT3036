@@ -119,6 +119,9 @@ export default class Presentation extends React.Component {
             <ListItem>System Tests</ListItem>
             <ListItem>Address Search</ListItem>
             <ListItem>List roads with individual area in Frontend</ListItem>
+            <ListItem>
+              Improve accuracy by including points upto bounds
+            </ListItem>
           </List>
         </Slide>
         <Slide bgColor="primary">
