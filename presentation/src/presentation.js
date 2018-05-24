@@ -90,8 +90,8 @@ export default class Presentation extends React.Component {
             </List>
             <ListItem>Infrastructure</ListItem>
             <List style={{ paddingLeft: '2em' }}>
-              <ListItem>Serverless using AWS</ListItem>
-              <ListItem>Lambda, API Gateway, S3, Cloudfront</ListItem>
+              <ListItem>Serverless using AWS &amp; Netlify</ListItem>
+              <ListItem>Lambda, API Gateway</ListItem>
             </List>
           </List>
         </Slide>
