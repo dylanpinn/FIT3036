@@ -32,18 +32,18 @@ We have decided to use as much Software as a Service (SaaS), Platform as a
 Service (PaaS) and Infrastructure as a Service (IaaS) solutions to keep costs
 down.
 
-Amazon Web Services (AWS) has been chosen to use due to its comprehensive free
-tier and prior experience with the platform. The following AWS services are
-going to be utilised:
+To host the API Amazon Web Services (AWS) has been chosen to use due to its
+comprehensive free tier and prior experience with the platform. The following
+AWS services are going to be utilised:
 
 * AWS Lambda — Functions as service; allows running back-end code without
   maintaining server infrastructure (AWS, 2018a).
 * AWS APIGateway — Allows creating public API endpoints for Lambda functions
   (AWS, 2018b).
-* AWS S3 — Cheap scalable storage to store front-end code (AWS, 2018c).
-* AWS Cloudfront — CDN for front-end code. Speeds up delivery by caching content
-  (AWS, 2018d).
-* AWS Cloudformation — Service to provision services on AWS (AWS, 2018e)
+
+To host the frontend application we have decided to use Netlify, it provides
+free services to open source projects. This includes a CDN, file hosting and
+automatic deployments from a CI/CD provider.
 
 We are going to use continuous integration and continuous deployment using
 Travis CI which offers free plans for Open Source software (CI, 2018). This

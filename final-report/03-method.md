@@ -22,7 +22,17 @@ that the road is only 2 lanes wide. This is then summed and returned.
 
 ## Internal Design
 
-<!-- TODO: Add sequence diagram for Calculate Total Surface Area. -->
+<!-- TODO: Add sequence diagrams. -->
+
+Calculate Area of a rectangle:
+
+These steps below are outlined in figure 4.
+
+1. User moves the map, adjusts zoom level or changes input.
+2. The bounds of the rectangle are send to the backend service.
+3. This calculates the total area of the bounds.
+4. This is returned to the user.
+
 
 Calculate Total Surface Area of Roads: These steps below are outlined in figure
 5
