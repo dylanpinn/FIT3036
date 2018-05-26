@@ -33,17 +33,16 @@ These steps below are outlined in figure 4.
 3. This calculates the total area of the bounds.
 4. This is returned to the user.
 
-
 Calculate Total Surface Area of Roads: These steps below are outlined in figure
 5
 
-1.  User requests to calculate total surface area of roads.
-2.  These parameters are sent to the back-end service.
-3.  These are used to call OpenStreetMap API
-4.  It then iterates over data and calculates the distance of all of the roads.
-5.  The area of these roads is then calculated with lane width.
-6.  These results are summed.
-7.  This is returned to the user.
+1. User requests to calculate total surface area of roads.
+2. These parameters are sent to the back-end service.
+3. These are used to call OpenStreetMap API
+4. It then iterates over data and calculates the distance of all of the roads.
+5. The area of these roads is then calculated with lane width.
+6. These results are summed.
+7. This is returned to the user.
 
 ## Software Architecture
 
