@@ -20,3 +20,39 @@
 * In the initial research, I couldn't find any other implementations/research
   that did these calculations using vector data. This was implemented through
   trial and error.
+
+## Externally Observable Features
+
+* Input
+  * User can manipulate the Google Map component using either touch/mouse.
+  * User can input coordinates for the Map to centre on this position.
+* Output
+  * The area in km^2 of the requested area is displayed to the user.
+  * This is a hard-coded square of size 1km^2.
+  * The user then can request the total surface area of the roads within this
+    area.
+  * This result is presented to the user.
+
+## Performance
+
+* The backend API is hosted on AWS Lambda, this restricts the amount of time the
+  functions and run for and the amount of space that they can occupy.
+  * The current settings are:
+    * 1024 MB of memory
+    * 6 seconds to time-out.
+
+The following are taken from AWS CloudWatch metrics
+
+### Area Function
+
+* Average invocation time
+  * 3 ms
+* Average memory usage
+  * 30 MB
+
+### Road Surface Area Function
+
+* Average invocation time
+  * 1800 ms
+* Average memory usage
+  * 28 MB
