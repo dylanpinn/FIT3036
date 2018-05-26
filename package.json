@@ -1,0 +1,30 @@
+{
+  "name": "project-documentation",
+  "version": "1.0.0",
+  "description":
+    "This is the repository for the Monash 3rd year computer science project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "precommit": "lint-staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dylanpinn/FIT3036-project-documentation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dylanpinn/FIT3036-project-documentation/issues"
+  },
+  "homepage":
+    "https://github.com/dylanpinn/FIT3036-project-documentation#readme",
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^7.1.2",
+    "prettier": "^1.12.1"
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": ["prettier --single-quote --write", "git add"]
+  }
+}
