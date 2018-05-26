@@ -71,4 +71,4 @@ The following is an outline of the software required for the project:
 * Test Plan
 * Workbook
 
-<!-- TODO: Add Gantt chart. -->
+* ADD GANTT CHART.

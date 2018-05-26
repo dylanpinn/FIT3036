@@ -22,7 +22,7 @@ that the road is only 2 lanes wide. This is then summed and returned.
 
 ## Internal Design
 
-<!-- TODO: Add sequence diagrams. -->
+**Add sequence diagrams.**
 
 Calculate Area of a rectangle:
 
@@ -51,8 +51,8 @@ Figure shows how architecture of the back-end code. It is broken up into 4 main
 classes, which calculate area, sum data, calculate distance and calculate the
 area of a road.
 
-<!-- TODO: Add class diagram. -->
+**Add class diagram.**
 
 ## Algorithms
 
-<!-- TODO: Add pseudocode for key functions. -->
+**Add pseudocode for key functions.**
