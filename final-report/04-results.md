@@ -17,3 +17,6 @@
 * Created throwaway spikes to test implementation of the backend API. This
   included querying a small set of data and performing the calculations on it.
   This helped to fine-tune and improve the accuracy of the algorithms used.
+* In the initial research, I couldn't find any other implementations/research
+  that did these calculations using vector data. This was implemented through
+  trial and error.
