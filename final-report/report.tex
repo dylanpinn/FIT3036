@@ -60,8 +60,6 @@ We have the following constrains on the project:
 % any research leading up to enabling the current project to happen (e.g.
 % current literature, existing case studies, existing studies)
 % datasets used in your current project, including any academic literature on the background of the dataset (e.g. a paper by the dataset's authors or info on how it was made)
-% project info: main project risks, their probabilities and risk reduction strategies, risks actually encountered
-% resource requirements (hardware and software)
 % tasks required and their dependency relations in producing the final project; as well as a timeline of the final completed project.
 
 \subsection{Project Info}
@@ -139,9 +137,38 @@ file hosting and automatic deployments from CI/CD providers.
 
 \paragraph{Other Services}
 
-
+To follow devops best practices we are automating the running of our tests
+and deployments. This is managed through the Travis CI service. They were
+chosen because they also offer free services for open source projects
+\autocite{trci:7}.
 
 \subsubsection{Software}
+
+The following software was chosen to aid in the development of the project.
+
+\paragraph{Backend}
+
+The backend API was developed using the Go programming language
+\autocite{go:8}, this was chosen because of its speed, as it is a compiled
+language \autocite{plural:9}. This will allow it to parse and manipulate large
+amounts of data quickly.
+
+\paragraph{Frontend}
+
+The frontend application was created using React, a frontend JavaScript
+framework created by Facebook \autocite{react:10}. This was chosen as it
+allows us to easily create user interfaces that are testable.
+
+\paragraph{Documentation}
+
+The documentation is written in \LaTeX, this was chosen for several reasons.
+
+\begin{itemize}
+  \item We don't have to worry about the typesetting of the document. \LaTeX{}
+    takes care of all of the formatting.
+  \item Includes a bibliography package BibTex.
+  \item Allows all of the documentation to be version controlled.
+\end{itemize}
 
 \subsection{Tasks}
 
