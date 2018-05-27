@@ -1,5 +1,16 @@
 \documentclass[a4paper,11pt]{article}
 
+\usepackage[utf8]{inputenc}
+\usepackage[british]{babel}
+\usepackage{csquotes}
+\usepackage[style=apa]{biblatex}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+
+\bibliography{report}
+
 \begin{document}
 
 \title{FIT3036 --- Final Report}
@@ -17,13 +28,37 @@
 \pagebreak
 
 \section{Introduction}
-% Introduction
-% Include also project objectives, requirements and constraints.
+% TODO: Add starting Introduction
+
+\subsection{Project Objectives}
+
+Out company secured a contract for a local council in Victoria to resurface
+roads in a designated square kilometre area. The objectives are to design,
+implement, test and deliver a system that will perform these calculations and
+display the result to the user.
+
+\subsection{Requirements}
+
+We are to use Google Maps and related products and any satellite/aerial views.
+The project involves writing the related code, with an elegant GUI to support
+calculations. \autocite[2]{intro:1}
+
+\subsection{Constraints}
+
+We have the following constrains on the project:
+
+\begin{itemize}
+  \item Only have access to publicly available data.
+  \item Limited to available information online.
+  \item No/Limited access to council records.
+  \item The project must be finalised by the end of week 12.
+\end{itemize}
 
 \section{Background}
 % Background
 % include a review of academic literature used when preparing for the project.
-% any research leading up to enabling the current project to happen (e.g. current literature, existing case studies, existing studies)
+% any research leading up to enabling the current project to happen (e.g.
+% current literature, existing case studies, existing studies)
 % datasets used in your current project, including any academic literature on the background of the dataset (e.g. a paper by the dataset's authors or info on how it was made)
 % project info: main project risks, their probabilities and risk reduction strategies, risks actually encountered
 % resource requirements (hardware and software)
@@ -48,7 +83,7 @@
 % Externally observable features of your software/simulation: input, output.
 % Performance: include time and space performance characteristics of your software as well as estimated complexities (including real-world processing time, storage space, bandwidth, etc.)
 
-\section{Analysis & Discussion}
+\section{Analysis \& Discussion}
 % Analysis & Discussion
 % analyse those statistics/outputs.
 % e.g. statistics-based project: results/outcomes for statistical tests on your data; evaluate the quality of your output; what statistics were collected under what circumstances.
@@ -63,6 +98,8 @@
 
 \section{Bibliography}
 
+\printbibliography{}
+
 \section{Appendices}
 % Appendices. Including, as advised by your supervisor:
 % Production and Deployment [IMPORTANT]: detailed instructions to run/install/compile your software, with complete instructions/screenshots. Include ALL information such as dependencies, platform, etc.
@@ -71,7 +108,5 @@
 % Any externally available functions not covered above (including debugging tools, auxilliary/helper functions, bonus features...
 % Internal testing procedures implemented including cross-references to your Test Report (which is submitted separately)
 % etc.
-
-
 
 \end{document}
