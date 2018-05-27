@@ -252,3 +252,61 @@ will be using.
 * Test a known Area to calculate the total area.
 * Test a known Distance to know the length of it.
 * Test a known Area to sanity check the surface area of the roads within it.
+
+# Week 7
+
+* Create backend functions to calculate the surface area of roads between 4
+  points.
+* Start creating tests to ensure correctness.
+* Create frontend with Google map which allows the user to drag a square around
+  the map.
+* Add button to calculate the area.
+* Need to connect button to API once finalised and display the result to the
+  user.
+* Start planning out final report.
+
+# Week 8
+
+* Start planning presentation
+* Investigating options for presentation
+  * Google Slides
+  * Apple Keynote
+  * Microsoft Powerpoint
+  * Web based
+    * Reveal
+    * Spectacle
+* Add Material UI to frontend application to give it consistent styling.
+  * https://material-ui.com/
+* Start working on the final report
+  * Write out each section as markdown files with notes.
+  * Create `latex` template that will be used.
+
+# Week 10
+
+* Decide on using Spectacle for presentation.
+  * http://formidable.com/open-source/spectacle/
+  * `react` application similar to frontent application.
+* Most of the final report background completed.
+* Future work for final report composed.
+
+# Week 10
+
+* Project application pretty much completed.
+* Tests for project written
+* Appendicies for final report
+
+# Week 11
+
+* Start working on Test Report
+* Add more slides to the presentation.
+* Finish method section for the final report
+* Add lat/long inputs to the frontend app to control map.
+
+# Week 12
+
+* Finalise presentation
+* Perform presentation
+* Finalise project
+* Finalise final-report
+* Finalise workbook
+* Finalise test-report
