@@ -6,8 +6,7 @@
 \usepackage[style=apa]{biblatex}
 \usepackage{graphicx}
 \usepackage{float}
-\usepackage{algorithm}
-\usepackage[noend]{algpseudocode}
+\usepackage{algpseudocode}
 
 \def\code#1{\texttt{#1}}
 
@@ -30,7 +29,7 @@
 \vspace{-1ex}
 \begin{center}
   % TODO: Update this at the end.
-  Word Count: 2332
+  Word Count: 2453
 \end{center}
 
 \begin{abstract}
@@ -323,8 +322,44 @@ data, calculate distance and calculate the area of the roads.
 
 \subsection{Algorithms}
 
-% TODO: Add intro
-% TODO: Add pseudocode for key methods.
+We have included the pseudocode algorithms of the two main functions of the
+application. How to calculate the area of the bounded rectangle and how to
+calculate the total surface area of the roads within the bounds.
+
+\subsubsection{Calculate Area of Bounds}
+
+\begin{samepage}
+\begin{algorithmic}
+  \Function{CalculateArea}{rect}
+    \State{} vertical distance $\gets$ \Call{CalculateDistance}{verticalPoints}
+    \State{} horizontal distance $\gets$
+    \Call{CalculateDistance}{horizontalPoints}
+    \State{} area $\gets$ vertical * horizontal distances
+    \State{} \Return{area}
+  \EndFunction{}
+\end{algorithmic}
+\end{samepage}
+
+\subsubsection{Calculate Total Surface Area of Roads within Bounds}
+
+\begin{samepage}
+\begin{algorithmic}
+  \Function{CalculateRoadSurfaceArea}{rect}
+    \State{} query $\gets$ \Call{buildQuery}{rect}
+    \State{} result $\gets$ \Call{OverPassAPI}{query}
+    \State{} total $\gets 0$
+    \For{roads in result}
+      \State{} lanes $\gets$ \Call{GetNoOfLanes}{road}
+      \State{} roadDistance $\gets 0$
+      \For{nodes in road}
+        \State{} roadDistance += \Call{CalculateDistance}{node1, node2}
+      \EndFor{}
+      \State{} total += roadDistance * lanes * LANE\_WIDTH
+    \EndFor{}
+    \State{} \Return{area}
+  \EndFunction{}
+\end{algorithmic}
+\end{samepage}
 
 \section{Results}
 
