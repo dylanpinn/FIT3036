@@ -6,6 +6,11 @@ the:
 * `workbook.md` - `markdown` source file.
 * `weekly-notes/*.md` - Weekly notes in Markdown files.
 
+## Requirements
+
+* `pandoc`
+
 ## Instructions
 
-* To build final report run `make`
+* To concat weekly notes to final report run `make concat`
+* To build pdf run `make`
