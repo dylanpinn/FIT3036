@@ -22,6 +22,7 @@
 \maketitle
 \vspace{-2ex}
 \begin{center}
+  % This can be calculated using texcount -sum report.tex
   % TODO: Update this at the end.
   Word Count: 2856
 \end{center}
@@ -470,7 +471,7 @@ The current restrictions are controlled in AWS, the settings are:
 
 \section{Analysis \& Discussion}
 
-% TODO: Add intro
+Here we analyse and discuss the results form the previous section.
 
 The results show that even though there are concerns about the accuracy of the
 results, we were able to meet the requirements.
@@ -478,6 +479,18 @@ results, we were able to meet the requirements.
 The performance results highlight that choosing the Go programming language
 for the backend API, allows it to perform above expectations in regards to
 time and memory restrictions.
+
+Even though finding good test data has been hard writing good unit tests gives
+confidence to the results, as each part is has been broken down into small
+functions and tested in isolation.
+
+Unfortunately, we were unable to find a nice way for OpenStreetMaps to only
+return data inside the requested bounds. We have chosen to remove the data
+points that are outside these bounds, however, this will lead to an
+underestimation of the area. Including these would lead to an over esitmation.
+
+If we could find a dataaset with lane width information, or the council exposed
+such data, this would greatly improve the accuracy of the application.
 
 % TODO: Add more to this section.
 
