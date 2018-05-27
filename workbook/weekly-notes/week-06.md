@@ -2,17 +2,17 @@
 
 ## Project Plan - Schedule
 
-- Create Gantt chart using [Team Gantt](https://teamgantt.com). This allows
+* Create Gantt chart using [Team Gantt](https://teamgantt.com). This allows
   working back from the due date to correctly meet deadlines.
 
 ## Project Plan - Risk
 
-- Started creating risk register
-- Add more to project plan - risk analysis
+* Started creating risk register
+* Add more to project plan - risk analysis
 
 ## External Design - User Interface
 
-- Create Mock-up of User Interface for Front end of app.
+* Create Mock-up of User Interface for Front end of app.
 
 ## Project plan - resource requirements
 
@@ -20,15 +20,15 @@ Hardware is all SASS, PASS, IASS solutions to keep costs down and ease of use.
 
 Hardware:
 
-- AWS to host all of the required components: AWS Lambda to run backend code AWS
-- API Gateway to route backend requests to lambda functions AWS S3 to host
-- frontend code AWS Cloudfront - CDN for frontend AWS Cloudformation - Provision
-- infrastructure CI/CD tools to build, test and deploy
+* AWS to host all of the required components: AWS Lambda to run backend code AWS
+* API Gateway to route backend requests to lambda functions AWS S3 to host
+* frontend code AWS Cloudfront - CDN for frontend AWS Cloudformation - Provision
+* infrastructure CI/CD tools to build, test and deploy
 
 Software:
 
-- Local development environment NodeJS to build frontend Latex to build
-- documentation Go Programming language to build backend
+* Local development environment NodeJS to build frontend Latex to build
+* documentation Go Programming language to build backend
 
 ## External Design - Functionality
 
@@ -71,37 +71,37 @@ will be using.
 
 ## Internal Design
 
-- Generate sequence diagrams for main methods in program.
+* Generate sequence diagrams for main methods in program.
 
 ## Software Architecture
 
-- Generate class diagram
+* Generate class diagram
 
 ## Test Plan - Coverage
 
-- These will automatically be run through development using tools to test
+* These will automatically be run through development using tools to test
   runners.
-- Tests will be run automatically through CI/CD service before deploying changes
+* Tests will be run automatically through CI/CD service before deploying changes
   to ensure that functionality is enforced.
-- Use jest and react-testing-library for testing frontend components.
-- Use Go inbuilt testing package for unit testing backend classes, functions.
+* Use jest and react-testing-library for testing frontend components.
+* Use Go inbuilt testing package for unit testing backend classes, functions.
 
 ## Test Plan - Test Methods
 
-- Unit tests on all class methods. This verifies that the individual functions
+* Unit tests on all class methods. This verifies that the individual functions
   behave as expected.
-- Integration tests for API backends to ensure that correct response is returned
+* Integration tests for API backends to ensure that correct response is returned
   for known parameters.
-- Unit test frontend components to ensure that they behave and interact in the
+* Unit test frontend components to ensure that they behave and interact in the
   correct manor.
-- Acceptance testing to make sure requirements are met.
-- Able to generate test coverage reports for front end and back end code.
+* Acceptance testing to make sure requirements are met.
+* Able to generate test coverage reports for front end and back end code.
   80-100% test coverage is acceptable.
-- System tests will test the system as a whole and test the entire
+* System tests will test the system as a whole and test the entire
   functionality.
 
 ## Test Plan - Sample Test Cases
 
-- Test a known Area to calculate the total area.
-- Test a known Distance to know the length of it.
-- Test a known Area to sanity check the surface area of the roads within it.
+* Test a known Area to calculate the total area.
+* Test a known Distance to know the length of it.
+* Test a known Area to sanity check the surface area of the roads within it.

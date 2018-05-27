@@ -25,13 +25,13 @@ Project Requirements - Non-functional requirements
 Project Plan - Overview
 
 * Project objectives:
-  * Our company secured a contract for a local council in Victoria to
-    re-surface roads in a designated square kilometre area.
+  * Our company secured a contract for a local council in Victoria to re-surface
+    roads in a designated square kilometre area.
   * Can use
     * Google Maps and related
     * Satellite/aerial views
-  * Work out the total area of roads in the nominated square kilometre to give
-    a quote.
+  * Work out the total area of roads in the nominated square kilometre to give a
+    quote.
   * Need to write related code along with an elegant GUI to support the
     calculations.
 * Requirements:
