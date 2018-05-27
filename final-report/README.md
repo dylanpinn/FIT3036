@@ -10,7 +10,7 @@ contains the:
 
 ## Requirements
 
-`latex`
+* `latex`
 
 ## Instructions
 
