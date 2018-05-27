@@ -105,8 +105,41 @@ The following issues arose throughout the project.
 \end{itemize}
 
 \subsection{Resource Requirements}
+% TODO: Add subsection intro.
 
 \subsubsection{Hardware}
+
+We have decided to use as much Software as a Service (SaaS), Platform as a
+Service (PaaS) and Infrastructure as a Service (IaaS) solutions to keep costs
+down. \autocite[4]{project-spec:2}
+
+\paragraph{Backend}
+
+To host the backend API, Amazon Web Services (AWS) has been chosen due to its
+comprehensive free tier and prior experience with the platform. Integration with
+the platform is handled by the Serverless framework \autocite{serverless:3}. The
+following AWS services have been used:
+
+\begin{itemize}
+  \item AWS Lambda
+    \begin{itemize}
+      \item Functions as a Service (FaaS).
+      \item Allows running backend code without maintaining server
+        infrastructure \autocite{aws:4}.
+    \end{itemize}
+  \item AWS API Gateway --- Allows creating public API endpoints for Lambda
+    functions \autocite{aws:5}
+\end{itemize}
+
+\paragraph{Frontend}
+
+To host the frontend application, we have chosen Netlify \autocite{netlify:6},
+it provides free services to open source projects. This includes a CDN, static
+file hosting and automatic deployments from CI/CD providers.
+
+\paragraph{Other Services}
+
+
 
 \subsubsection{Software}
 
