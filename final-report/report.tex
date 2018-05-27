@@ -9,6 +9,8 @@
 \usepackage{algorithm}
 \usepackage[noend]{algpseudocode}
 
+\def\code#1{\texttt{#1}}
+
 \bibliography{report}
 
 \title{FIT3036 --- Final Report}
@@ -25,7 +27,7 @@
 \vspace{-1ex}
 \begin{center}
   % TODO: Update this at the end.
-  Word Count: 1789
+  Word Count: 2122
 \end{center}
 
 \begin{abstract}
@@ -430,5 +432,121 @@ calculations and then send these to other users to review.
 \printbibliography{}
 
 \section{Appendices}
+
+\subsection{Production \& Deployment}
+
+\subsubsection{Frontend Application}
+
+The code for this application is hosted in a GitHub repository
+\autocite{github:13}.
+
+\paragraph{Local Setup}
+
+% TODO: Add this section once frontend README has been updated.
+
+\paragraph{Deployment}
+
+\subsubsection{Backend Application}
+
+The code for this application is hosted in a GitHub repository
+\autocite{github:14}.
+
+\paragraph{Local Setup}
+
+Requirements for running the application locally are:
+
+\begin{itemize}
+  \item Go programming language version 1.10 or higher \autocite{go:8}.
+  \item Dep --- Go dependency management tool \autocite{dep:12}.
+\end{itemize}
+
+\noindent{}
+Installation steps:
+
+\begin{itemize}
+  \item \code{dep ensure -v} --- This installs the required dependencies.
+\end{itemize}
+
+\noindent{}
+Run Locally:
+
+\begin{itemize}
+  \item \code{go run local/main.go} --- This starts a local server running on
+    localhost port 8080.
+  \item When running the application locally it is expecting that the local copy
+    of the API server is also running.
+\end{itemize}
+
+\paragraph{Deployment}
+
+Requirements for deploying the application to production include the development
+dependencies plus:
+
+\begin{itemize}
+  \item GNU Make \autocite{gnu:15}
+  \item NodeJS version $\geq 6$ \autocite{node:16}
+  \item Yarn package manager \autocite{yarn:17}
+  \item AWS CLI \autocite{aws:18} --- API Keys need to be configured.
+\end{itemize}
+
+\noindent{}
+Installation steps:
+
+\begin{itemize}
+  \item \code{yarn install} --- This installs the serverless framework required
+    to deploy the application.
+\end{itemize}
+
+\noindent{}
+Deploy:
+
+\begin{itemize}
+  \item \code{make deploy} --- This builds and deploys the application.
+\end{itemize}
+
+\subsection{GUI Features}
+
+The graphical user interface has the following features:
+
+\begin{itemize}
+  \item Google Map iFrame that mirrors the functionality found on the Google
+    Maps website.
+  \item Latitude \& Longitude number inputs. These manually move the centre of the map
+    to the desired coordinate.
+  \item ``Calculate Area'' button that performs a HTTP POST request to one of the
+    backend services.
+  \item Can either use the map controls or the input to control the map.
+  \item The centre square is automatically drawn at a 1km \textsuperscript{2}
+    area around the centre of  the map.
+\end{itemize}
+
+\subsection{User Interface}
+
+% TODO: Add screenshots.
+
+\subsection{Internal Testing}
+
+Both frontend and backend applications contain unit tests that can be run to
+ensure the correctness of them.
+
+\subsubsection{Frontend Tests}
+
+To run tests for the frontend application, run the following command while in
+the root directory of the application:
+
+\begin{itemize}
+  \item \code{yarn test}
+  \item This starts the test runner. Entering \code{a} will run all of the tests
+    in the suite.
+\end{itemize}
+
+\subsubsection{Backend Tests}
+
+To run tests for the backend application, when in the root directory of the
+project run the following command:
+
+\begin{itemize}
+  \item \code{go test ./...}
+\end{itemize}
 
 \end{document}
