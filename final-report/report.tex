@@ -25,7 +25,7 @@
 \vspace{-1ex}
 \begin{center}
   % TODO: Update this at the end.
-  Word Count: 1465
+  Word Count: 1789
 \end{center}
 
 \begin{abstract}
@@ -40,7 +40,7 @@
 
 \subsection{Project Objectives}
 
-Out company secured a contract for a local council in Victoria to resurface
+Our company secured a contract for a local council in Victoria to resurface
 roads in a designated square kilometre area. The objectives are to design,
 implement, test and deliver a system that will perform these calculations and
 display the result to the user.
@@ -384,21 +384,51 @@ time and memory restrictions.
 % TODO: Add more to this section.
 
 \section{Future Work}
-% Future work: Include also any possible future research that might emanate from the project.
+
+We have found the following future work which would help to expand and improve
+upon this application.
+
+\paragraph{System Tests} We include unit tests for both the frontend and backend
+applications, but no system tests. Including tests that test the whole
+application as a whole, frontend and backend, will increase the confidence in
+the application and will help catch regressions and issues that could occur
+between the two applications.
+
+\paragraph{Address Search} Allowing the user to search for areas using the
+Google Maps Places API.\@ This will help refine and search for areas without
+having to manually move the map around or know and enter the latitude and
+longitude coordinates.
+
+\paragraph{Polygon} Allowing the user to draw the area to perform the
+calculations would help, as more than likely the end user wants to perform
+calculations for areas that are not perfect squares. Google Maps provides a
+Polygon API which would help with the implementation of this. Implementing this
+would require a substantial change to the backend APIs to allow for bounds to be
+a polygon and not a rectangle.
+
+\paragraph{List Roads with Individual Areas} This would aid the user to
+understand what the total surface area is composed off. Including a list of the
+roads and their individual surface areas would not be a large change as all of
+this data is present from the OpenStreetMap API.\@ We just need to return it
+with the Road Surface Area API call and display it on the frontend for the user.
+
+\paragraph{Save \& Restore Maps} Allowing the user to save maps and access them
+later, would be important functionality if this was to be released. This would
+allow users to perform multiple calculations and then at a later time restore
+them to compare.
+
+\paragraph{Share Maps} Allowing users to share maps with other users would be a
+likely must requested requirement as users would need to be able to perform
+calculations and then send these to other users to review.
 
 \section{Conclusion}
+
+% TODO: Add Conclusion
 
 \section{Bibliography}
 
 \printbibliography{}
 
 \section{Appendices}
-% Appendices. Including, as advised by your supervisor:
-% Production and Deployment [IMPORTANT]: detailed instructions to run/install/compile your software, with complete instructions/screenshots. Include ALL information such as dependencies, platform, etc.
-% Parameters used, their ranges. If GUIs were used: GUI features used for them (e.g. input boxes, choices, etc...) If a command interface was used: parameters, switches, arguments, etc.
-% User Interface: How to run the software (be as specific as possible). Any other functions made available to the user (incl. screenshots of the various features "at work" with sample data). Also, for WWW-based services/appliances - detail clearly the interface(s) to your Web-based project.
-% Any externally available functions not covered above (including debugging tools, auxilliary/helper functions, bonus features...
-% Internal testing procedures implemented including cross-references to your Test Report (which is submitted separately)
-% etc.
 
 \end{document}
