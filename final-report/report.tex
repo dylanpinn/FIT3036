@@ -17,7 +17,6 @@
 % Provide the title, abstract, author names (and contact details,
 % affiliations, etc.) and keywords on the first page alone (i.e. this is a
 % separate cover page).
-% Show Word Count on title page.
 % Abstract (<300 words)
 % Keywords (<6)
 
@@ -26,7 +25,7 @@
 \vspace{-1ex}
 \begin{center}
   % TODO: Update this at the end.
-  Word Count: 616
+  Word Count: 1018
 \end{center}
 
 \begin{abstract}
@@ -200,6 +199,94 @@ The following tasks were planned and executed to complete the project:
 % software architecture: overall structure of the code; high-level structure (if any) of the final completed project. Consider including class diagrams if you’re using an OO programming language.
 % also, elaborate on key algorithms/functions/formulae used – pseudocode, flowcharts, etc.
 % statistics (*if your project deals with raw statistics incl. simulations.) -- What statistics are collected and how they are output.
+
+% TODO: Add intro to section.
+
+\subsection{Methods Overview}
+% TODO: Add intro to subsection.
+
+\subsubsection{Calculate Area}
+% TODO: Add intro to subsection.
+
+\begin{itemize}
+  \item The user uses the map controls in the frontend application to refine
+    the desired area to calculate the surface area of the roads.
+  \item The coordinates of the square is passed via a HTTP POST request to
+    the backend API.\@
+  \item These coordinates are used to calculate the area of the square.
+  \item This is done by calculating the distance between between the
+    north/south coordinates and the east/west coordinates.
+  \item This is then multiplied together to return the area.
+  \item This result is displayed for the user in the user interface.
+\end{itemize}
+
+\subsubsection{Calculate Surface Area of Roads}
+% TODO: Add intro to subsection.
+
+\begin{itemize}
+  \item Once the user is satisfied with the area and clicks the ``Calculate
+    Area'' button it performs a HTTP POST request to the backend API.\@
+  \item The coordinates of the rectangle are sent in the POST body as JSON.\@
+  \item These coordinates are used by the backend API to generate a query to
+    send to OpenStreetMap via their OverPass API.\@
+  \item This returns all of the road information contained within the rectangle
+    bounds.
+  \item The roads are then looped over, calculating the distance between each of
+    the nodes of the road. Once the distance is calculated it uses the lane
+    information if provided otherwise assumes that the road contains 2 lanes.
+  \item The distance is multiplied by the number of lanes and the width of a
+    lane, 3.5m the default lane width within Australia \autocite{lane:11}.
+\end{itemize}
+
+\subsection{Internal Design}
+
+% TODO: Add intro to subsection.
+% TODO: Add Sequence diagrams.
+
+\paragraph{Calculate Area of a Rectangle}
+
+% TODO: Connect to Figure.
+These steps below are outlined in FIGURE
+
+\begin{itemize}
+  \item User moves the map, adjusts zoom level or changes input.
+  \item The bounds of the rectangle are send to the backend service.
+  \item This calculates the total area of the bounds.
+  \item This is returned to the user.
+\end{itemize}
+
+\paragraph{Calculate Surface Area of Roads}
+
+% TODO: Add Sequence diagrams.
+% TODO: Connect to Figure.
+These steps are outlined in FIGURE
+
+\begin{itemize}
+  \item User requests to calculate total surface area of roads.
+  \item These parameters are sent to the backend service.
+  \item These parameters are used to call OpenStreetMap API.\@
+  \item It then iterates over the returned data and calculates the distance of
+    all of the roads.
+  \item If any of the points of the data are outside the bounds of the rectangle
+    they are ignored.
+  \item The area of the roads is then calculated with the lane width.
+  \item These results are summed.
+  \item This is returned to the user.
+\end{itemize}
+
+\subsection{Software Architecture}
+
+FIGURE shows the architecture of the backend application. It is broken up into 4
+main classes, which calculate area, sum data, calculate distance and calculate
+the area of the roads.
+
+% TODO: Add class diagram
+% TODO: Update code or diagrams to match description.
+
+\subsection{Algorithms}
+
+% TODO: Add intro
+% TODO: Add pseudocode for key methods.
 
 \section{Results}
 % Results
