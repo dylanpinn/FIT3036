@@ -30,7 +30,7 @@
 \vspace{-1ex}
 \begin{center}
   % TODO: Update this at the end.
-  Word Count: 2318
+  Word Count: 2332
 \end{center}
 
 \begin{abstract}
@@ -269,12 +269,10 @@ of an area.
 \subsection{Internal Design}
 
 % TODO: Add intro to subsection.
-% TODO: Add Sequence diagrams.
 
 \paragraph{Calculate Area of a Rectangle}
 
-% TODO: Connect to Figure.
-These steps below are outlined in FIGURE
+These steps below are outlined in figure~\ref{fig:seq-total-area}
 
 \begin{itemize}
   \item User moves the map, adjusts zoom level or changes input.
@@ -283,11 +281,15 @@ These steps below are outlined in FIGURE
   \item This is returned to the user.
 \end{itemize}
 
+\begin{figure}[H]
+  \includegraphics[width=\textwidth]{sequence-diagram-calculate-total-surface-area}
+  \caption{Sequence Diagram --- Calculate Total Surface
+  Area}\label{fig:seq-total-area}
+\end{figure}
+
 \paragraph{Calculate Surface Area of Roads}
 
-% TODO: Add Sequence diagrams.
-% TODO: Connect to Figure.
-These steps are outlined in FIGURE
+These steps are outlined in figure~\ref{fig:seq-total-area-roads}
 
 \begin{itemize}
   \item User requests to calculate total surface area of roads.
@@ -301,6 +303,12 @@ These steps are outlined in FIGURE
   \item These results are summed.
   \item This is returned to the user.
 \end{itemize}
+
+\begin{figure}[H]
+  \includegraphics[width=\textwidth]{sequence-diagram-calculate-total-surface-area-of-roads}
+  \caption{Sequence Diagram --- Calculate Total Surface Area of
+  Roads}\label{fig:seq-total-area-roads}
+\end{figure}
 
 \subsection{Software Architecture}
 
