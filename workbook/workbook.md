@@ -130,9 +130,12 @@ Project Plan - Overview
 ```bash
 [out:json][timeout:25];
   (
-    node['highway']['highway'!='footway']['highway'!='pedestrian']['-highway'!='path'](-36.95687426637871,145.13076760784406,-36.93890796069632,145.1532484622462);
-    way['highway']['highway'!='footway']['highway'!='pedestrian']['-highway'!='path'](-36.95687426637871,145.13076760784406,-36.93890796069632,145.1532484622462);
-    relation['highway']['highway'!='footway']['highway'!='pedestrian']['-highway'!='path'](-36.95687426637871,145.13076760784406,-36.93890796069632,145.1532484622462);
+    node['highway']['highway'!='footway']['highway'!='pedestrian']
+    ['-highway'!='path'](-36.95687426637871,145.13076760784406,-36.93890796069632,145.1532484622462);
+    way['highway']['highway'!='footway']['highway'!='pedestrian']
+    ['-highway'!='path'](-36.95687426637871,145.13076760784406,-36.93890796069632,145.1532484622462);
+    relation['highway']['highway'!='footway']['highway'!='pedestrian']
+    ['-highway'!='path'](-36.95687426637871,145.13076760784406,-36.93890796069632,145.1532484622462);
     );
     out body;
   >;
