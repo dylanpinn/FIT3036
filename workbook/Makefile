@@ -1,4 +1,2 @@
 build:
-	latexmk -pdf
-watch:
-	latexmk -pvc -pdf
+	cat ./weekly-notes/*.md > workbook.md
