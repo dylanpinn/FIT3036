@@ -25,7 +25,7 @@
 \vspace{-1ex}
 \begin{center}
   % TODO: Update this at the end.
-  Word Count: 1018
+  Word Count: 1416
 \end{center}
 
 \begin{abstract}
@@ -193,12 +193,6 @@ The following tasks were planned and executed to complete the project:
 % TODO: Add Gantt charts and other project management information.
 
 \section{Method}
-% Method
-% explain the methodology used in your project - provide technical details.
-% internal design: description of how the parts of the final completed project are meant to work together (e.g. sequence diagrams, use-case, package overview, etc.)
-% software architecture: overall structure of the code; high-level structure (if any) of the final completed project. Consider including class diagrams if you’re using an OO programming language.
-% also, elaborate on key algorithms/functions/formulae used – pseudocode, flowcharts, etc.
-% statistics (*if your project deals with raw statistics incl. simulations.) -- What statistics are collected and how they are output.
 
 % TODO: Add intro to section.
 
@@ -298,6 +292,92 @@ the area of the roads.
 % the statistics/outputs collected;
 % Externally observable features of your software/simulation: input, output.
 % Performance: include time and space performance characteristics of your software as well as estimated complexities (including real-world processing time, storage space, bandwidth, etc.)
+
+% TODO: Add intro.
+
+The Program has 2 main outputs:
+
+\begin{itemize}
+  \item Area of the bounds.
+  \item Total surface area of the road between the bounds.
+\end{itemize}
+
+The bounds is the rectangle area comprising of a set of coordinates; North,
+South, East and West.
+
+Finding reliable data to test against is hard. Writing unit tests allow testing
+smaller parts of the application in isolation. This helps give confidence to the
+accuracy of the application.
+
+OpenStreetMap API returns data from outside the requested bounds. As the data
+points can start within the bounds and finish outside it is excluded. This
+reduces the accuracy.
+
+Lane information isn't always included in the OpenStreetMap API so assumptions
+are made about the default number of lanes. We have chose a safe default that if
+no lane information is provided then the road is 2 lanes wide.
+
+Using a default lane width of 3.5m, also reduces the accuracy. If we can find a
+dataset that contains the lane width of each road with the vector data this
+would help improve the accuracy of the program.
+
+In the initial research, we couldn't find any other implementations/research
+that did these calculations using vector data. Because of this the methodology
+of the application was implemented through trial and error.
+
+We created throwaway spikes to test implementation of the backend API.\@ This
+included querying a small set of data and performing the calculations on it.
+This helped to fine-tune and improve the accuracy of the algorithms used.
+
+\subsection{Externally Observable Features}
+
+% TODO: Add intro
+
+\subsubsection{Input}
+
+\begin{itemize}
+  \item User can manipulate the Google Map component using either touch or
+    mouse.
+  \item User can input coordinates for the Map to centre on this position by
+    using the latitude and longitude number inputs.
+\end{itemize}
+
+\subsubsection{Output}
+
+\begin{itemize}
+  \item The area in km\textsuperscript{2} of the requested area is displayed to
+    the user.
+  \item This is a hard-coded square of size 1km\textsuperscript{2}.
+  \item The user then can request the total surface area of the roads within
+    this area.
+  \item This result is presented to the user in the frontend interface.
+\end{itemize}
+
+\subsection{Performance}
+
+The backend API is hosted on AWS Lambda, this restricts the amount of time the
+functions and run for and the amount of space that they can occupy.
+
+The current restrictions are controlled in AWS, the settings are:
+
+\begin{itemize}
+  \item 1024 MB of memory.
+  \item 6 seconds to run function before timing out.
+\end{itemize}
+
+\subsubsection{Area Function}
+
+\begin{itemize}
+  \item Average Invocation Time --- 3ms
+  \item Average Memory Usage --- 30MB
+\end{itemize}
+
+\subsubsection{Road Surface Function}
+
+\begin{itemize}
+  \item Average Invocation Time --- 1800ms
+  \item Average Memory Usage --- 28MB
+\end{itemize}
 
 \section{Analysis \& Discussion}
 % Analysis & Discussion
